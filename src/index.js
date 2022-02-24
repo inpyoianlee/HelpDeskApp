@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header'
+import { CssBaseline } from '@mui/material';
 
 import {
   BrowserRouter as Router, 
@@ -15,7 +16,7 @@ import {
 const App = () => {
   return (
     <div id="App">
-      <h1>Hello, World!!!</h1>
+      <CssBaseline />
       <Header />
     </div>
   );
