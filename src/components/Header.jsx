@@ -4,8 +4,7 @@ import {
   AppBar,
   Toolbar,
   Box,
-  IconButton,
-  Button, 
+  IconButton, 
   Drawer, 
   List, 
   ListItem, 
@@ -41,7 +40,7 @@ const Header = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Tickets", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["Tickets", "Unresolved", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
