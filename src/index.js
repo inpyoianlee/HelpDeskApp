@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import {Header, useStyles, Dashboard} from './components'
-import { CssBaseline, Typography, Grid } from '@mui/material';
+import { CssBaseline, Typography, Container } from '@mui/material';
 
 import {
   BrowserRouter as Router, 
@@ -19,10 +19,13 @@ const App = () => {
     <div id="App">
       <CssBaseline />
       <Header />
-      <Typography className={classes.welcomeLine} variant='h4' align='center'>
-        Time to take care of some unresolved help tickets bucko
-      </Typography>
-      <Dashboard />
+      <Container>
+        
+        <Typography className={classes.welcomeLine} variant='h2' align='center'>
+          Creating an intuitive Help Desk application for your company
+        </Typography>
+
+      </Container>
     </div>
   );
 };
