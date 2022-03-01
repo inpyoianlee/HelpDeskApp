@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     }, 
     differentThings: {
         padding: "20px"
-    }
+    }, 
+    
 }));
 
 export default useStyles;
