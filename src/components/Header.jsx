@@ -92,9 +92,9 @@ const Header = () => {
               {list("left")}
             </Drawer>
           </React.Fragment>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Help Desk
-          </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                <Link underline="none" color="inherit" href="/">Help Desk</Link>
+            </Typography>
           <Breadcrumbs aria-label="breadcrumb">
             <Link underline="hover" color="inherit" href='/aboutUs'>
                 About Us
