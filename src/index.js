@@ -2,7 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Header, useStyles, Dashboard } from "./components";
+import { Header, 
+  useStyles,
+  Dashboard, 
+  AboutUs, 
+  Login, 
+  SignUp
+} from "./components";
+
 import { CssBaseline, 
   Typography, 
   Container, 
@@ -27,18 +34,16 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/aboutus">
-          <Typography variant="h2">
-            ABOUT US IN PROGRESS
-          </Typography>
+          <AboutUs />
         </Route>
         <Route path="/login">
           <Typography variant="h2">
-            LOGIN IN PROGRESS
+            <Login />
           </Typography>
         </Route>
         <Route path="/signup">
           <Typography variant="h2">
-            SIGNUP IN PROGRESS
+            <SignUp />
           </Typography>
         </Route>
         <Route path="/">
