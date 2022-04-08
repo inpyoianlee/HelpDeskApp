@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -31,14 +32,14 @@ const theme = createTheme();
 
 export default function SignIn() {
   let history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    event.preventDefault()
+    console.log("email:", email)
+    console.log("password:", password)
+    // from here, need to check if username and password match database things
   };
 
   return (
@@ -69,6 +70,8 @@ export default function SignIn() {
               name="email"
               autoComplete="email"
               autoFocus
+              value={ email }
+              onChange={ e => setEmail(e.target.value) }
             />
             <TextField
               margin="normal"
@@ -79,6 +82,8 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
+              value={ password }
+              onChange={ e => setPassword(e.target.value) }
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}

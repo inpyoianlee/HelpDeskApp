@@ -99,7 +99,6 @@ const AboutUs = () => {
                 value={message}
                 required
                 id="message"
-                label="Your message"
                 name="message"
                 autoComplete="message"
                 onChange={e => setMessage(e.target.value)}
